@@ -20,3 +20,5 @@ echo "@reboot $PWD/start-server.py" >> mycron
 crontab mycron
 rm mycron
 
+echo 'Go here to enable less secure apps:'
+echo 'https://www.google.com/settings/security/lesssecureapps'
