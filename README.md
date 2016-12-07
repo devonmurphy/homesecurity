@@ -24,7 +24,7 @@ sudo apt-get install git
 **Clone git Repo**
 <pre>
 cd ~/
-git clone https://github.com/devonmurphy/PIHomeSecurity
+git clone https://github.com/devonmurphy/homesecurity
 cd PIHomeSecurity/
 </pre>
 
