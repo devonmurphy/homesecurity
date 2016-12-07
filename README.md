@@ -27,20 +27,13 @@ git clone https://github.com/devonmurphy/PIHomeSecurity
 cd PIHomeSecurity/
 </pre>
 
-**Uncompress ffmpeg**
+**Add Your Gmail Username and Password To start-server.py**
 <pre>
-tar -xvf arm.tar.gz
+nano start-server.py
 </pre>
 
-**Add A Stream Key To "start-stream"**
-Change the "YourStreamKeyHere" to the steam key provided to you on https://www.youtube.com/live_dashboard
-When you are done editing the file, hit cntrl+x to quit and press Y to save.
+**Install**
 <pre>
-nano start-stream
-</pre>
-
-**Start A Stream**
-<pre>
-./start-stream
+./install
 </pre>
 # homesecurity
