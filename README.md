@@ -36,4 +36,3 @@ nano start-server.py
 <pre>
 ./install
 </pre>
-# homesecurity
