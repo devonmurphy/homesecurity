@@ -25,7 +25,7 @@ sudo apt-get install git
 <pre>
 cd ~/
 git clone https://github.com/devonmurphy/homesecurity
-cd PIHomeSecurity/
+cd homesecurity/
 </pre>
 
 **Add Your Gmail Username and Password To start-server.py**
