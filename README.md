@@ -1,5 +1,5 @@
 #Intro To Raspberry Pi: DIY Home Security System
-This repository demonstrates how to stream live video to Youtube from a Raspberry Pi. Slides used from the class are here:
+This repository demonstrates how to setup a live stream to a web interface from a Raspberry Pi. Slides used from the class are here:
 
 [Class Slides](https://docs.google.com/presentation/d/1jFV8XzrUoVljoIxuk7CGZpTRrUEx1HQH5a4gPmkIESA/pub?start=false&loop=false&delayms=3000)
 
