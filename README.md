@@ -34,7 +34,8 @@ nano start-server.py
 </pre>
 
 **Enable Less Secure Apps In Gmail**
-In order for start-server.py to send you an email, you need to enable less secure apps in gmail.
+
+In order for start-server.py to send you an email, you need to enable less secure apps in gmail. Go here:
 
 [https://www.google.com/settings/security/lesssecureapps](https://www.google.com/settings/security/lesssecureapps)
 
