@@ -10,7 +10,7 @@ This repository demonstrates how to stream live video to Youtube from a Raspberr
 ssh pi@192.168.1.yourIP
 </pre>
 
-**Enable Camera And Expand Filesystem**
+**Enable Pi Camera**
 <pre>
 sudo raspi-config
 </pre>
