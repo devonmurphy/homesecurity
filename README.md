@@ -32,6 +32,9 @@ cd PIHomeSecurity/
 nano start-server.py
 </pre>
 
+**Enable Less Secure Apps In Gmail**
+In order for start-server.py to send you an email, you need to enable less secure apps in gmail.
+[https://www.google.com/settings/security/lesssecureapps](https://www.google.com/settings/security/lesssecureapps)
 **Install**
 <pre>
 ./install
