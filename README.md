@@ -4,7 +4,10 @@ This repository demonstrates how to setup a live stream to a web interface from 
 [Class Slides](https://docs.google.com/presentation/d/1jFV8XzrUoVljoIxuk7CGZpTRrUEx1HQH5a4gPmkIESA/pub?start=false&loop=false&delayms=3000)
 
 #Installation
-
+**Enable Camera and SSH**
+<pre>
+raspi-config
+</pre>
 **SSH Into Pi**
 <pre>
 ssh pi@192.168.1.yourIP
