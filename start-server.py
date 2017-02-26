@@ -8,28 +8,32 @@ import smtplib
 
 ############################################
 EMAIL = "YOUR_GMAIL_EMAIL"
-PASS = "YOUR_GMAIL_PASS"
+PASS = "YOUR_GMAIL_PASSWORD"
 ############################################
 
 DELAY = 10
 
 def getEth0IP():
     ipString = os.popen("ifconfig eth0 | grep \"inet addr:\"").read()
-    ipStringArray= ipString.split(":")
-    ipStringArray= ipStringArray[1].split(" ")
-    return ipStringArray[0]
+    if ipString:
+        ipStringArray= ipString.split(":")
+        ipStringArray= ipStringArray[1].split(" ")
+        return ipStringArray[0]
+    return "not connected"
 
 
 def getWlan0IP():
     ipString = os.popen("ifconfig wlan0 | grep \"inet addr:\"").read()
-    ipStringArray= ipString.split(":")
-    ipStringArray= ipStringArray[1].split(" ")
-    return ipStringArray[0]
+    if ipString:
+        ipStringArray= ipString.split(":")
+        ipStringArray= ipStringArray[1].split(" ")
+        return ipStringArray[0]
+    return "not connected"
 
 directory = os.path.dirname(os.path.realpath(__file__))
 print directory
 
-#Wait DELAY number of seconds then start ngrok
+#Wait 2 seconds then start ngrok
 time.sleep(DELAY)
 os.system(directory + '/ngrok http 80 -log=stdout > /dev/null &')
 
