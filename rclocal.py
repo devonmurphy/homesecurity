@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+#This adds start-server.py to the file /etc/rc.local
+#This causes the script to run at boot
 import os
 
 dirPath = os.path.dirname(os.path.realpath(__file__))
