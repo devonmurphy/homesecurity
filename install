@@ -15,10 +15,7 @@ sudo pip install requests
 
 #Start-server at boot
 cd ..
-sudo crontab -l > mycron
-echo "@reboot $PWD/start-server.py" >> mycron
-crontab mycron
-rm mycron
+sudo python rclocal.py
 
 echo 'Go here to enable less secure apps:'
 echo 'https://www.google.com/settings/security/lesssecureapps'
