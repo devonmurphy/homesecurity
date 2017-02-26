@@ -7,12 +7,20 @@ import json
 import smtplib
 
 ############################################
-EMAIL = "YOUR_GMAIL_ACCOUNT@gmail.com"
-PASS = "YOUR_GMAIL_PASSWORD"
+EMAIL = "YOUR_GMAIL_EMAIL"
+PASS = "YOUR_GMAIL_PASS"
 ############################################
 
-#gets the ip of the wirless interface
-def getIP():
+DELAY = 10
+
+def getEth0IP():
+    ipString = os.popen("ifconfig eth0 | grep \"inet addr:\"").read()
+    ipStringArray= ipString.split(":")
+    ipStringArray= ipStringArray[1].split(" ")
+    return ipStringArray[0]
+
+
+def getWlan0IP():
     ipString = os.popen("ifconfig wlan0 | grep \"inet addr:\"").read()
     ipStringArray= ipString.split(":")
     ipStringArray= ipStringArray[1].split(" ")
@@ -21,8 +29,8 @@ def getIP():
 directory = os.path.dirname(os.path.realpath(__file__))
 print directory
 
-#Wait 10 seconds then start ngrok
-time.sleep(1)
+#Wait DELAY number of seconds then start ngrok
+time.sleep(DELAY)
 os.system(directory + '/ngrok http 80 -log=stdout > /dev/null &')
 
 #Wait 2 seconds then get the url of the ngrok website
@@ -39,7 +47,11 @@ stringPublicURL = stringPublicURL[8:len(publicURL)]
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
 server.login(EMAIL, PASS)
-server.sendmail(EMAIL, EMAIL, '\nhttp://'+stringPublicURL+'/html\n\nIP: '+getIP())
+server.sendmail(EMAIL, EMAIL, 
+'\nhttp://'+
+stringPublicURL+
+'/html\n\nWireless IP: '+
+getWlan0IP()+
+'\n\nWired IP: '+
+getEth0IP())
 server.quit()
-
-
