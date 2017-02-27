@@ -8,9 +8,7 @@ chmod u+x *.sh
 ./install.sh
 
 #Install Python Libraries
-wget https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
-rm get-pip.py
+sudo apt-get install python-pip
 sudo pip install requests
 
 #Start-server at boot
