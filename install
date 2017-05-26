@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#Start-server at boot
+sudo cp start-server.service /etc/systemd/system/
+sudo systemctl enable start-server.service
 
 #Install RPI Cam From https://github.com/silvanmelchior/RPi_Cam_Web_Interface
 git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
@@ -10,10 +13,6 @@ chmod u+x *.sh
 #Install Python Libraries
 sudo apt-get install python-pip
 sudo pip install requests
-
-#Start-server at boot
-cd ..
-sudo python rclocal.py
 
 echo 'Go here to enable less secure apps:'
 echo 'https://www.google.com/settings/security/lesssecureapps'

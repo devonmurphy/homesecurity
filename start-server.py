@@ -5,14 +5,21 @@ import time
 import requests
 import json
 import smtplib
+import ConfigParser as cfg
 
-############################################
-EMAIL = "YOUR_GMAIL_EMAIL"
-PASS = "YOUR_GMAIL_PASSWORD"
-############################################
 
-DELAY = 10
+directory = os.path.dirname(os.path.realpath(__file__))
 
+#Read configuration.ini to get gmail username and password
+Config = cfg.ConfigParser()
+Config.read( directory+"/configuration.ini")
+EMAIL = Config.get("login","gmail_username")
+PASS = Config.get("login","password")
+
+#Set the delay in seconds for the script to wait in between steps
+DELAY = 2
+
+#Gets the ip address of the ethernet port
 def getEth0IP():
     ipString = os.popen("ifconfig eth0 | grep \"inet addr:\"").read()
     if ipString:
@@ -21,7 +28,7 @@ def getEth0IP():
         return ipStringArray[0]
     return "not connected"
 
-
+#Gets the ip address of the wireless connection
 def getWlan0IP():
     ipString = os.popen("ifconfig wlan0 | grep \"inet addr:\"").read()
     if ipString:
@@ -29,9 +36,6 @@ def getWlan0IP():
         ipStringArray= ipStringArray[1].split(" ")
         return ipStringArray[0]
     return "not connected"
-
-directory = os.path.dirname(os.path.realpath(__file__))
-print directory
 
 #Wait 2 seconds then start ngrok
 time.sleep(DELAY)

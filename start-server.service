@@ -1,0 +1,10 @@
+[Unit]
+Description=service_description
+After=network.target
+
+[Service]
+ExecStart=python /home/pi/homesecurity/start-server.py
+Type=simple
+
+[Install]
+WantedBy=default.target
