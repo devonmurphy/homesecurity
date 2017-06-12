@@ -31,7 +31,12 @@ git clone https://github.com/devonmurphy/homesecurity
 cd homesecurity/
 </pre>
 
-**Add Your Gmail Username and Password To configuration.ini**
+**Install**
+<pre>
+./install
+</pre>
+
+**If You Want To Receive An Email With Your ngrok URL Add Your Gmail Username and Password To configuration.ini**
 <pre>
 nano configuration.ini
 </pre>
@@ -42,7 +47,3 @@ In order for start-server.py to send you an email, you need to enable less secur
 
 [https://www.google.com/settings/security/lesssecureapps](https://www.google.com/settings/security/lesssecureapps)
 
-**Install**
-<pre>
-./install
-</pre>
