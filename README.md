@@ -36,7 +36,8 @@ cd homesecurity/
 ./install
 </pre>
 
-**If You Want To Receive An Email With Your ngrok URL Add Your Gmail Username and Password To configuration.ini**
+**Add Your Gmail Username and Password To configuration.ini**
+If you want to receive an email of your PI's ngrok public url, add your gmail account info to this file.
 <pre>
 nano configuration.ini
 </pre>
