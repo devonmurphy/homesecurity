@@ -1,9 +1,9 @@
-#Intro To Raspberry Pi: DIY Home Security System
+**Intro To Raspberry Pi: DIY Home Security System**
 This repository demonstrates how to setup a live stream to a web interface from a Raspberry Pi. Slides used from the class are here:
 
 [Class Slides](https://docs.google.com/presentation/d/1jFV8XzrUoVljoIxuk7CGZpTRrUEx1HQH5a4gPmkIESA/pub?start=false&loop=false&delayms=3000)
 
-#Installation
+**Installation**
 **Enable Camera and SSH**
 <pre>
 raspi-config
@@ -31,9 +31,9 @@ git clone https://github.com/devonmurphy/homesecurity
 cd homesecurity/
 </pre>
 
-**Add Your Gmail Username and Password To start-server.py**
+**Add Your Gmail Username and Password To configuration.ini**
 <pre>
-nano start-server.py
+nano configuration.ini
 </pre>
 
 **Enable Less Secure Apps In Gmail**
